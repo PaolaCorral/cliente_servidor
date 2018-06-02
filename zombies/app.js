@@ -13,9 +13,9 @@ app.use(bodyParser.urlencoded({extended:false}));
 
 app.get('/',(request,response) => response.render('index'));
 
-app.get('/clases',(request,response) => response.render('index'));
-app.get('/armas',(request,response) => response.render('index'));
-app.get('/victimas',(request,response) => response.render('index'));
+app.get('/clases',(request,response) => response.render('clases'));
+app.get('/armas',(request,response) => response.render('armas'));
+app.get('/victimas',(request,response) => response.render('victimas'));
 
 app.use((request,response) => response.status(404).render('404'));
 
