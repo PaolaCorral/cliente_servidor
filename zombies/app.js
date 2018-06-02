@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 
 app.get('/',(request,response) => response.render('index'));
 
+app.use(express.static(path.resolve(__dirname,"public")));
 app.get('/clases',(request,response) => response.render('clases'));
 app.get('/armas',(request,response) => response.render('armas'));
 //app.get('/victimas',(request,response) => response.render('victimas'));
