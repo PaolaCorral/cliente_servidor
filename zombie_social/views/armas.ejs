@@ -1,0 +1,16 @@
+<% include _header %>
+<h1> Armas </h1>
+
+<% armas.forEach((arma) => { %>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <label>
+                <%= arma.nom() %>
+            </label>
+        </div>
+        <% if(arma.descripcion){ %>
+            <div class="panel-body"><%= arma.descripcion %></div>
+        <% } %>        
+    </div>
+<% }) %>
+<% include _footer %>
