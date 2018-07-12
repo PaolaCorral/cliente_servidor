@@ -20,9 +20,20 @@
                             Hola, <%= currentZombie.name() %>
                         </a>
                     </li>
+                    <li>       
+                        <a>                 
+                            <%= currentZombie.rol() %>                        
+                        </a>  
+                    </li>
                     <li>
                         <a href="/logout">Salir</a>
                     </li>
+                    <li>
+                        <a href="/armas">Armas</a>
+                    </li>
+                    <li>
+                        <a href="/regarmas">Registrar armas</a>
+                    </li>  
                     <% } else { %>
                     <li>
                         <a href="/login">Entrar</a>
@@ -30,12 +41,7 @@
                     <li>
                         <a href="/signup">Registrarse</a>
                     </li>   
-                    <li>
-                        <a href="/armas">Armas</a>
-                    </li>
-                    <li>
-                        <a href="/regarmas">Registrar armas</a>
-                    </li>                                       
+                                                         
                 <% } %>
             </ul>
         </div>

@@ -17,6 +17,8 @@ mongoose.connect("mongodb://localhost:27017/zombie_nest");
 
 passportsetup();
 
+
+
 app.set("port",process.env.PORT  || 3000);
 
 app.set("views", path.resolve(__dirname, "views"));
@@ -29,10 +31,8 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
+
 app.use(flash());
-
-
-
 
 app.use(passport.initialize({
     userProperty: "zombie"

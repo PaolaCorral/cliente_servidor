@@ -1,6 +1,8 @@
 var bcrypt = require("bcrypt-nodejs");
 var mongoose =require("mongoose");
 
+
+
 var SALT_FACTOR = 10;
 
 var zombieSchema = mongoose.Schema({
@@ -8,7 +10,8 @@ var zombieSchema = mongoose.Schema({
     password: {type: String, required: true},
     createdAt: {type: Date, default: Date.now},
     displayName: {type: String},
-    bio: String
+    bio: String,
+    role: String
 });
 
 var donothing = () =>{
@@ -42,6 +45,8 @@ zombieSchema.methods.checkPassword = function(guess, done) {
 zombieSchema.methods.name = function(){
     return this.displayName || this.username;
 }
-
+zombieSchema.methods.rol = function(){
+    return this.role;
+}
 var zombie = mongoose.model("Zombie", zombieSchema);
 module.exports = zombie;
